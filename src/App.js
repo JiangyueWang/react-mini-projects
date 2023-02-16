@@ -1,8 +1,16 @@
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/NavBar/NavBar";
+import ImageCarouselPage from "./pages/ImageCarouselPage/ImageCarouselPage"
+
 function App() {
   return (
-    <div className="App">
-      <p>hello world</p>
+    <div>
+      <Navbar />
+      <Routes>
+        <Route path="/imgCarousel" element={<ImageCarouselPage />}/>
+      </Routes>
     </div>
+
   );
 }
 
