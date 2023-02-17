@@ -1,4 +1,5 @@
 import MapImageOne from "../../components/MapImageOne/MapImageOne";
+import MapImageTwo from "../../components/MapImageTwo/MapImageTwo";
 
 const ImageCarouselPage = () => {
     const images = [
@@ -16,6 +17,7 @@ const ImageCarouselPage = () => {
             </h2>
             
             <MapImageOne images={images}/>
+            <MapImageTwo images={images}/>
 
         </div>
      );
