@@ -7,7 +7,7 @@ const Navbar = () => {
         <ul>
           <li>
             <Link to="/imgCarousel">
-              Image Cousel
+              Image Carousel
             </Link>
           </li>
         </ul>
