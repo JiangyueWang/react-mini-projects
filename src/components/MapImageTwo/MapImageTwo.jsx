@@ -1,5 +1,5 @@
 import { React, useRef, useState } from 'react';
-import { useScroll } from 'react-use';
+
 import {
     SnapList,
     SnapItem,
@@ -8,7 +8,6 @@ import {
 
 const MapImageTwo = (props) => {
     const snapList = useRef(null);
-    const goToSnapItem = useScroll({ ref: snapList });
 
     const [current, setCurrent] = useState(0);
 
@@ -19,13 +18,15 @@ const MapImageTwo = (props) => {
             setCurrent(current => current + 1);
         }
         if (snapList.current) {
-            snapList.current.scroll({ left: index * snapList.current.offsetWidth, behavior: 'smooth' });
+            snapList.current.scroll();
         }
       }
 
     return ( 
         <div>
         <p> snap list and snap item</p>
+        {/* The SnapList component provides the list container that holds the images, 
+        and the SnapItem component is used to wrap each image in the list. */}
             <SnapList ref={snapList}> 
             
                 {props.images.map((image, index) => (

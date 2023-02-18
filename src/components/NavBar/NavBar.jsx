@@ -9,7 +9,13 @@ const Navbar = () => {
             <Link to="/imgCarousel">
               Image Carousel
             </Link>
-          </li>
+
+          </li>            
+          <li>
+            <Link to="/hooks">
+              Hooks
+            </Link>  
+          </li>  
         </ul>
       </div>
     );
