@@ -11,24 +11,37 @@ const MapImageOne = (props) => {
         setCurrent(current === 0 ? props.images.length - 1 : current - 1)
     }
 
+    // onClick the image to change to loop through the image
+    const handleImgClick = (index) => {
+        if(index === props.images.length - 1) {
+            setCurrent(0);
+        } else {
+            setCurrent(current => current + 1);
+        }
+      }
+
     return (  
         <div>            
-            <p onClick={nextImg}> 
-                Next
-            </p>
+
+            <p onClick={preImg}>
+                Previous
+            </p> 
             
             {props.images.map(
                     (image, index) =>
                         current === index ? 
                             (<div key={image}>
-                                <img src={image} alt="images" />
+                                <img src={image} alt="images" onClick={() => handleImgClick(index)} />
                             </div>) : null
             )}
 
-            <p onClick={preImg}>
-                Previous
-            </p> 
 
+            <p onClick={nextImg}> 
+                Next
+            </p>
+            
+            <p>click next/prev button to view the next/previous image</p>
+            <p>click the image itself to loop through the images</p>
             <div>
                 <p>
                     React concepts used
@@ -37,6 +50,7 @@ const MapImageOne = (props) => {
                     <li>useState (storing and updating state)</li>
                     <li>Conditionals (ternaries)</li>
                     <li>Lists, keys, and .map()</li>
+                    <li>handle onClick event</li>
                 </ul>
                 <p>Resource: <a href="https://www.freecodecamp.org/news/react-projects-for-beginners-easy-ideas-with-code/">React Projects for Beginners in 2023 – Fun Ideas with Code</a></p>
             </div>
