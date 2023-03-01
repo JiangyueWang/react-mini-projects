@@ -1,9 +1,10 @@
-import { React, useRef, useState } from 'react'
+import { React, useRef } from 'react'
 
 import {
     SnapList,
     SnapItem,
     useScroll,
+    useDragToScroll
   } from 'react-snaplist-carousel';
   
 
@@ -11,10 +12,11 @@ const MapImageTwo = (props) => {
     const snapList = useRef(null);
     // Once goToSnapItem is called with a specific index, it will scroll the SnapList to the corresponding SnapItem in the list. 
     const goToSnapItem = useScroll({ ref: snapList });
+    const { isDragging } = useDragToScroll({ ref: snapList, disable: false });
 
     return ( 
         <div>
-        <p> snap list and snap item</p>
+        <p>{isDragging ? 'Dragging' : 'No dragging'}</p>
         {/* The SnapList component provides the list container that holds the images, 
         and the SnapItem component is used to wrap each image in the list. */}
             <SnapList ref={snapList}> 
@@ -30,6 +32,25 @@ const MapImageTwo = (props) => {
                     ) 
                 )}
             </SnapList>
+
+            <div>
+                <h3>Function explain</h3> 
+                <p>click the image will swip to the next one</p>
+                <p>once click on the last image will return to the first image</p>
+                <p>click the image then drag to left or right</p>
+            </div>
+            
+            <div>
+                <h3>
+                    React concepts used
+                </h3> 
+                <ul>
+                    <li>react-snaplist-carousel package</li>
+                    <li>handle onClick event</li>
+                </ul>
+                <p>Resource: <a href="https://www.npmjs.com/package/react-snaplist-carousel">react-snaplist-carousel
+</a></p>
+            </div>
         </div>
     );
 }

@@ -40,12 +40,16 @@ const MapImageOne = (props) => {
                 Next
             </p>
             
-            <p>click next/prev button to view the next/previous image</p>
-            <p>click the image itself to loop through the images</p>
+            <div> 
+                <h3>Function explain</h3>
+                <p>click next/prev button to view the next/previous image</p>
+                <p>click the image itself to loop through the images</p>
+            </div>
+
             <div>
-                <p>
+                <h3>
                     React concepts used
-                </p> 
+                </h3> 
                 <ul>
                     <li>useState (storing and updating state)</li>
                     <li>Conditionals (ternaries)</li>
