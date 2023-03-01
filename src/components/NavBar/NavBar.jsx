@@ -6,10 +6,19 @@ const Navbar = () => {
       <div className="navBar">
         <ul>
           <li>
+            <Link to="/">
+              Home
+            </Link>
+          </li>
+          <li>
             <Link to="/imgCarousel">
               Image Carousel
             </Link>
-
+          </li>            
+          <li>
+            <Link to="/faq">
+              FAQ
+            </Link>
           </li>            
           <li>
             <Link to="/hooks">
