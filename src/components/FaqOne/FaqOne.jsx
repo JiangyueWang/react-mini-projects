@@ -2,10 +2,15 @@ import QuestionOne from "./QuestionOne";
 
 const FaqOne = (props) => {
     return (
-        <div>
-            {props.questions.map(question => (
+        <div >
+            <div className="container">
+            <h3>Frequently Asked Questions</h3>
+            <div className="questions">
+                {props.questions.map(question => (
                 <QuestionOne question={question}/>
             ))}
+            </div>
+            </div>
             <div> 
                 <h3>Function explain</h3>
                 <p>click "+" button to expand the answer</p>

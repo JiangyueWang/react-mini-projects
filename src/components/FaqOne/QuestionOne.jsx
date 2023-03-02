@@ -5,11 +5,19 @@ const QuestionOne = (props) => {
         setOpen(!isOpen)
     }
     return (  
-    <div>
-        <p>{props.question.title}</p>
-        <button onClick={handleClick}>{isOpen ? "-" : "+"}</button>
-        {isOpen === true ? (<p>{props.question.info}</p>) : null}
-    </div>
+        <section>
+            <div className="question">
+                <div className="flex">
+                    <p>{props.question.title}</p>
+                    <div>
+                        <button onClick={handleClick}>{isOpen ? "-" : "+"}</button>
+                    </div>
+                    
+                </div>
+                {isOpen === true ? (<p>{props.question.info}</p>) : null}
+            </div>
+        </section>
+
     );
 }
  

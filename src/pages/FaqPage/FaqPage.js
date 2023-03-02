@@ -1,4 +1,5 @@
-import FaqOne from "../../components/FaqOne/FaqOne"
+import FaqOne from "../../components/FaqOne/FaqOne"; 
+import "../FaqPage/FaqPage.css"
 const FaqPage = () => {
     const questions = [
         {
