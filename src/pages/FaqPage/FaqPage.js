@@ -1,4 +1,5 @@
 import FaqOne from "../../components/FaqOne/FaqOne"; 
+import FaqTwo from "../../components/FaqTwo/FaqTwo"; 
 import "../FaqPage/FaqPage.css"
 const FaqPage = () => {
     const questions = [
@@ -26,6 +27,7 @@ const FaqPage = () => {
         <div>
             <h2>FAQ</h2>
             <FaqOne questions={questions} />
+            <FaqTwo questions={questions} />
         </div>
     );
 }
